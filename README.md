@@ -108,7 +108,7 @@ tail -n 3 .bash_history => to give 3 final commande in bash history
 
 ctrl + r  => to search for commande the enter to excute 
 
-##practical tools :
+## practical tools :
 
 netcat => tools for read and write in network connection using tcp/udp protocols
 
