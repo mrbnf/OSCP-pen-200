@@ -299,7 +299,66 @@ costimazing the bash environment :
 alias lsa="ls -la" => to define a commande
 
 
+## bash scripting :
 
+chmod +x file.sh => to make the file excutable.
+
+
+variables :
+
+variable_name= data => to declare variable
+
+variable_name=$(whoami)  or variable_name=`commande`  => to save the result of commande to variables
+
+arguments : ./file.sh arg1 arg2 
+
+====#!/bin/bash
+
+====echo the firt two arguments are  and  
+
+====echo the firt two arguments are $1 and $2 
+
+user input :
+
+#!/bin/bash
+
+read -p 'Username: ' username
+
+read -sp 'Password: ' password
+
+echo thank you :  $username  and $password
+
+if else :
+
+#!/bin/bash
+
+# else statement example
+
+read -p "What is your age: "age
+
+if [ $age -lt 16 ]
+
+then
+
+echo "You might need parental permission to take this course!"
+
+else
+
+echo "Welcome to the course!"
+
+fi
+
+and or :
+
+grep $user2 /etc/passwd && echo "$user2 found" || echo "$user2 not found" => if result of first command not null excute the second command else excute 
+
+the third comand
+
+seq 1 10 => list of numbers between 1 and 10
+ 
+host www.-----.com => for find ip address of the url
+
+searchsploit  => work with exploit-db site web
 
 
 
