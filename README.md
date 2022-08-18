@@ -361,5 +361,47 @@ host www.-----.com => for find ip address of the url
 searchsploit  => work with exploit-db site web
 
 
+## passive information gathering :
+
+whois megacorpone.com => information about site web
+
+google hacking : for searching deep information in google https://www.exploit-db.com/google-hacking-database
+
+site:esi-sba.dz filetype:php=> for php file
+
+site:esi-sba.dz -filetype:php => for non-php file
+
+intitle:"index of" => li fiha title "index of"
+
+netcraft :
+
+https://searchdns.netcraft.com/ => information about site web
+
+recon-ng : like metasploit 
+
+use the modules recon/domains-hosts/google_site_web and recon/hosts-hosts/resolve
 
 
+
+open source code : searching for the code source in githab gitlab  the searching for velnerability
+
+shodan: like netcraft 
+
+security headers scanner: securityheaders.com/
+
+ssl test :www.ssllabs.com
+
+pastebin
+
+user information gathering:
+
+theHarvester -d megacorpone.com -b google
+
+
+social media gethering:
+
+www.social-searcher.com
+
+gathering information framwork :
+
+https://osintframework.com/
