@@ -475,3 +475,11 @@ netBios : port 139 for knowing information about advice like user ,mac address,s
 SMTP : simple mail transport protocol
 
 SNMP : simple network management protocol => collect inormation about devices (process , open port ,apps installed) in network , monitor network device ,draw network topology
+
+## vulnaribility scanning :
+    with Nessus:
+        systemctl start nessusd.service
+        http://mrbnf-pc:8834/
+    with nmap:
+        use script engine.
+        sudo nmap --sript vuln 10.11.1.10 => to run all vuln script scanners
