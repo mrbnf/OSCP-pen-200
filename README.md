@@ -405,3 +405,73 @@ www.social-searcher.com
 gathering information framwork :
 
 https://osintframework.com/
+
+
+## active information gathering :
+dns enumeration :
+    host www.esi-sba.dz
+    host -t mx megacorpone.com => for the mail hostname
+    host -t ns megacorpone.com => for the dns server
+        bruteforce search :
+        for name in $(cat dns.txt);do host $name.megacorpone.com; done => for searching subdomain from text list
+        for number in $(seq 1 255); do host 193.194.79.$number; done |grep -v "not found"
+
+        dns zone transfert :
+        host -l esi-sba.dz 193.194.79.194 => give list of domain related in esi-sba.dz ****
+        nmap --script=dns-zone-transfer -p 53 ns.esi-sba.dz
+        other tools :
+        dnsrecon -d megacorpone.com -t axfr
+        dnsenum
+
+port Scanning:
+    tcp scaning:
+        nc -nvv -w 1 -z 192.168.43.1 3388-3390
+    udp scaning:
+port scaning with nmap :  
+     sudo iptables -I INPUT 1 -s 18.11,1,220 -j ACCEPT 
+     
+     sudo iptables -I OUTPUT 1 -d 18.11.1.228 -j ACCEPT 
+     
+     sudo iptables -z 
+     
+     nmap 10.11.1.220  == nmap -sS 10.11.1.220   => scan 1000 port
+     
+     nmap -sT 10.11.1.220  => for scaning the proxies
+     
+     sudo iptab\es -vn -L 
+     
+     nmap -p 1-65535 10.11.1.220 => to specify range of port
+     
+udp scanning:
+    
+    nmap -sU 10.11.1.22
+    
+    sudo nmap -sU -sS -p 1-1000 192.168.43.1
+    
+network scanning :
+    
+    sudo nmap -sn 192.168.43.1-254
+    
+    sudo nmap -v -sn 192.168.43.1-254 -oG file.txt
+
+os fingerprinting :
+    
+    sudo nmap -O 192.168.43.1
+
+service version enumeration :
+    
+    sudo nmap -sV -sT192.168.43.1
+
+nmap scripting engine :
+    
+    nmap 192.168.43.1 --script=name-script
+    
+massscan : like nmap but fatest 
+
+SMB enumeration : port 445  for sharing files and message between devices in local
+
+netBios : port 139 for knowing information about advice like user ,mac address,serveur 
+
+SMTP : simple mail transport protocol
+
+SNMP : simple network management protocol => collect inormation about devices (process , open port ,apps installed) in network , monitor network device ,draw network topology
