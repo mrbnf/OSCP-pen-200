@@ -483,3 +483,44 @@ SNMP : simple network management protocol => collect inormation about devices (p
     with nmap:
         use script engine.
         sudo nmap --sript vuln 10.11.1.10 => to run all vuln script scanners
+
+## web application attack :
+   
+   enumeration:Programming language and frameworks ,Web server software,Database software ,Server operating system
+   
+   show the url (exemple url.php)
+   
+   inspecte element (framwork used)
+   
+   show http requests and responses
+   
+   searching sitemaps : sitemaps for help search engine
+   
+   Adminidtration console : admin page , search for /phpmyadmin or /manager/html
+   
+   web application tools : 
+   
+   dirb => for searching directories or web pages with dictionarry
+   
+   dirb http://www.megacorpone.com -r -z 18 
+   
+   burpsuite => is a proxy we can interept and modify the request 
+   
+   nikto => web server scanner 
+   
+   nikto -host=http://www.megacorpone.com -maxtime=30s
+exp
+loiting web based vulnerabiliy :
+
+1- web admin console : attack the page admin using burpsuite
+
+2-Cross site scripting : when special caractere not removed or encoded like " ' < ;
+
+3-Directory Traversal Vulnerabilities :to show specific files when we find ?file in url
+
+4-File Inclusion Vulnerabilities :  include a file 
+
+5- SQL injection : when ' # allowed we can send sql instruction  we can use sqlmap
+
+
+
