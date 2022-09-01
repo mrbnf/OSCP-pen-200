@@ -522,5 +522,14 @@ loiting web based vulnerabiliy :
 
 5- SQL injection : when ' # allowed we can send sql instruction  we can use sqlmap
 
+## buffer overflow : when we can provide eip registre 
 
+
+1- we send multiple input and see if the eip registre change.
+
+2 - locate the place of eip registre in the multiple input . => use msf pattern create
+
+3- search for address of instruction : jmp esp and remplace in the place of eip in the paylod .
+
+4 - generate the shell code
 
