@@ -533,3 +533,14 @@ loiting web based vulnerabiliy :
 
 4 - generate the shell code
 
+
+client side attack : use web site or office document to gather information or hack
+  
+  1- gather information type of browser using site web
+  
+  2- write a code in site web that be excuted in victim machine and open shell session
+  
+  3 - write code in word file
+  
+  4- link a code excution in word file
+        
