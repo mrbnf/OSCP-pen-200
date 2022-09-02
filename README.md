@@ -544,3 +544,27 @@ client side attack : use web site or office document to gather information or ha
   
   4- link a code excution in word file
         
+        
+ ## locating public exploit :
+ 
+ 
+ https://www.exploit-db.com/
+ 
+ https://securityfocus.com/
+ 
+ https://packetstormsecurity.com/
+ 
+ using google (intext inurl ect)
+ 
+ searchploit
+ 
+ nmap nse script => usr/share/nmap/scripts => nmap --script-help=scriptname //to show information
+ 
+ Beef
+ 
+ metasploit framework => msfconsole -q  then search
+        
+        
+## fixing exploit : 
+
+read and modify the code of public exploits.
