@@ -568,3 +568,27 @@ client side attack : use web site or office document to gather information or ha
 ## fixing exploit : 
 
 read and modify the code of public exploits.
+
+file transfert : actions after exploitation or gain some access 
+
+    python -c 'import pty; pty.spawn("/bin/bash") '
+    
+    
+antivirus evasion :
+
+
+https://www.virustotal.com/gui/home/upload
+
+disq evasion :
+
+packers : minimise the size
+
+obfscutors  : change the code to be able to not reverse engineering
+
+crypters : crypti
+
+memory evasion :
+
+in the ram ,how we can inject the paylaod
+
+shelter : inject paylod to a programme or logiciel.
