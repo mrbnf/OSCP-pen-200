@@ -592,3 +592,131 @@ memory evasion :
 in the ram ,how we can inject the paylaod
 
 shelter : inject paylod to a programme or logiciel.
+
+
+privellage escalation : attack the programme or services runned as administator and modify with adding cmd command or attack the kernal
+    
+    information gathering :
+    
+    
+    manual : we can obtain more information then automated
+    
+    enumerating users :
+    
+    whoami  => to know the user
+    
+    net user user_name  => information about user in windows
+    
+    id  => information about user in kali
+    
+    net user  => information about other users
+    
+    cat /etc/passwd => to enumerate user in linux
+    
+    hostname => to find the hostname
+    
+    systeminfo => information about operating system in windows
+    
+    cat /etc/*-release => information about system in linux
+    
+    uname -a => kernal version and architecture
+    
+    enumerating runing process and services :
+    
+    tasklist /SVC => for windows
+    
+    ps axu => for linux
+    
+    enumerating network :
+    
+    ipconfig /all => for windows
+    
+    route print => route table
+    
+    netstate -ano
+    
+    
+    
+    ip a => for linux
+    
+    /sbin/route => routing table for linux
+    
+    ss -anp => process with ip/port
+    
+    enumerating firewall status and role :
+    
+    netsh advfirewa11 show currentprofile => if on or of
+    
+    netsh advfirewall firewall show rule name=all => to show the rules
+    
+    enumerating scheduled tasks:
+    
+    schtasks /query /fo LIST /v => for windows
+                ls -lah /etc/cron* => for linux
+    
+    cat /etc/crontab
+    
+    enumertaing installed application and patch levels:
+    
+    wmic product get name, version, vendor => list programm installed with widows installer
+    
+    wmic qfe get Caption, Description, HotFixID, InstaltedOn
+    
+    dbkg -l => for linux
+    
+    enumerating readable and writable file and directories:
+    
+    accesschk.exe -uws "Everyone" "C:\Program Files"
+    
+    or 
+    
+    powershell
+    
+    Get-Chi\ditem "C:\Program Files'' -Recurse I Get-ACL I ?{$_.AccessToString -match "Everyone\sAllow\s\sModify"}
+    
+    enumerating unmounted disk:
+    
+    mountvol => for windows
+    
+    
+    
+    mount => for linux
+    
+    cat /etc/fstab
+    
+    /bin/lsblk
+    
+    enumertaing devices drivers and kernal modules:
+    
+    poweshell
+    
+    driverquery.exe / v / fo csv play Name ', ' Start Mode', Path
+    
+    Get-WmiObject Win32_PnPSignedDriver I Se\ect-Object DeviceName, DriverVersion, Manufacturer I Where-Object {$_.DeviceName -\ike "*VMware*"}
+    
+    lsmod => linux
+    
+    /sbin/modinfo name_module
+    
+    Enumerating Binaries That AutoE/evate :
+    
+    
+    
+    reg query HKEY_CURRENT_USER\Software\Poticies\Microsoft\ Windows\ Installer
+    
+    reg query HKEY_LOCAL_MACHINE\Software\Poticies\Microsoft\Windows\Installer  => for windows
+    
+    
+    
+    find / -perm -u=s -type f 2>/dev/ nutt => for linux.
+    
+    automated enumeration : using script.
+    
+    windows-privesc-check2.exe => for windows
+    
+    unix-privesc-check => for unix
+    
+    
+    
+    
+
