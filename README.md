@@ -717,6 +717,29 @@ privellage escalation : attack the programme or services runned as administator 
     unix-privesc-check => for unix
     
     
+    password attack :
+    
+    wordlist : /usr/share/wordlist
+    
+    cewl www.megacorpone.com -m 6 -w megacorp-cewt.txt
+    
+    john --wordtist=megacorp-cewt.txt --rules --stdout > mutated.txt
+    
+    crunch => to generate bruteforce or pattern of password
+    
+    tools to apply wordlist attack:
+    
+    medusa => attack http login 
+    
+    crowbar => attack rdp
+    
+    hydra => to attack ssh and others protocol
+    
+    tools to crack password or hash :
+    
+    john
+    
+    
     
     
 
